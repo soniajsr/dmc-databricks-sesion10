@@ -1,0 +1,96 @@
+# Bundle "project_sdp": el mismo pipeline de la Sesión 09 (Lab 1 Explora),
+# ahora parametrizado por ambiente para poder promoverlo a otro workspace (Sesión 10).
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: project_sdp
+  uuid: eb9d4db5-1701-4c02-8b33-d63759fe1bfc
+
+include:
+  - resources/*.yml
+
+# Variables asignadas por target más abajo. Cada target tiene su propio catalog
+# (dbassociate_dev/test/prod) y su propia landing dentro de ese catalog
+# (/Volumes/<catalog>/default/vol_landing/input/), así que los lotes de clientes
+# se suben una vez por ambiente. Los tres schemas son iguales en todos.
+variables:
+  catalog:
+    description: Catálogo de Unity Catalog donde este target publica bronze/silver/gold
+    default: dbassociate
+  schema_bronze:
+    description: Schema de la capa Bronze
+    default: bronze
+  schema_silver:
+    description: Schema de la capa Silver
+    default: silver
+  schema_gold:
+    description: Schema de la capa Gold
+    default: gold
+  landing_path:
+    description: Ruta del Volume donde Auto Loader lee los lotes de clientes
+    default: /Volumes/dbassociate/default/vol_landing/input/
+
+targets:
+  dev:
+    # Mismo workspace que ya se usó en la Sesión 09, pero publica en un catalog
+    # nuevo (dbassociate_dev) en vez de reusar dbassociate: así los tres targets
+    # quedan simétricos (cada uno con su propio catalog) y este laboratorio no
+    # toca las tablas que ya corrían desde la Sesión 09. El catalog y el volume
+    # de landing no se autocrean (los schemas bronze/silver/gold, sí): se crean
+    # antes del primer deploy (Paso 4 de sesion10_setup.ipynb).
+    # Se despliega desde el panel Deployments del Git folder (sin CLI): el
+    # target vive en el mismo workspace donde está abierto ese Git folder.
+    mode: development
+    default: true
+    presets:
+      source_linked_deployment: false
+    # Sin workspace.host: el panel Deployments usa el workspace donde está abierto
+    # el Git folder (y el CLI, el host del perfil).
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: dbassociate_dev
+      landing_path: /Volumes/dbassociate_dev/default/vol_landing/input/
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE
+
+  test:
+    # El "otro workspace" del taller de esta sesión: reemplazá el host por el de
+    # un segundo workspace (o el mismo workspace si estás practicando con un solo
+    # ambiente disponible, usando igual un catalog distinto para no pisar dev).
+    # El panel Deployments no puede desplegar a un host distinto del que tenés
+    # abierto, así que este target se despliega desde el Web Terminal del
+    # workspace de test (databricks bundle deploy -t test), no desde el panel.
+    # Mismo requisito que dev: crear el catalog dbassociate_test y su volume de
+    # landing antes del primer deploy (Paso 6).
+    mode: production
+    presets:
+      source_linked_deployment: false
+    workspace:
+      host: <url-del-otro-workspace>
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: dbassociate_test
+      landing_path: /Volumes/dbassociate_test/default/vol_landing/input/
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE
+
+  prod:
+    # Tercer ambiente, agregado para completar el modelo dev/test/prod y para que
+    # el ejemplo de CI/CD del Paso 8 (deploy -t prod, gateado por aprobación
+    # manual) apunte a un target real. Fuera del recorrido guiado de este
+    # laboratorio (Pasos 1-9): requiere un tercer workspace propio, y el catalog
+    # y su volume de landing tampoco se autocrean.
+    mode: production
+    presets:
+      source_linked_deployment: false
+    workspace:
+      host: <url-del-workspace-prod>
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: dbassociate_prod
+      landing_path: /Volumes/dbassociate_prod/default/vol_landing/input/
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE

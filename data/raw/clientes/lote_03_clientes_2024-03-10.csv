@@ -1,0 +1,24 @@
+id_cliente,nombre,email,ciudad,fecha_registro
+60,Pedro Huaman,pedro.huaman@outlook.com,Ica,2024/03/06
+61,Lucia Salazar,lucia.salazar@gmail.com,Lima,2024-02-07 15:49:00
+62,Diego Castro,diego.castro@hotmail.com,Arequipa,08/03/2024 16:56:00
+63,Elena Rios,elena.rios@yahoo.com,Trujillo,02/09/2024
+64,Fernando Chavez,fernando.chavez@outlook.com,Chiclayo,2024-03-10
+65,Gabriela Paredes,gabriela.paredes@gmail.com,Piura,11/02/2024
+66,Ricardo Medina,ricardo.medina@hotmail.com,Cusco,03-12-2024
+67,Sofia Vargas,sofia.vargas@yahoo.com,Huancayo,2024/02/13
+68,Andres Cardenas,andres.cardenas@outlook.com,Tacna,2024-03-14 12:38:00
+69,Valentina Espinoza,valentina.espinoza@gmail.com,Iquitos,15/02/2024 13:45:00
+70,Manuel Aguirre,manuel.aguirre@hotmail.com,Pucallpa,03/16/2024
+71,Daniela Cabrera,daniela.cabrera@yahoo.com,Chimbote,2024-02-17
+72,Sebastian Nunez,sebastian.nunez@outlook.com,Ica,18/03/2024
+73,Camila Reyes,camila.reyes@gmail.com,Lima,02-19-2024
+74,Javier Morales,javier.morales@hotmail.com,Arequipa,2024/03/20
+68,Andres Cardenas,andres.cardenas@outlook.com,Piura,31/12/2099
+71,Daniela Cabrera,daniela.cabrera@yahoo.com,Ica,1850-06-15
+3,Ana Torres,ana.torres@gmail.com,Tacna,03/03/2024
+45,Victor Alarcon,victor.alarcon@yahoo.com,Arequipa,03/04/2024
+50,Silvia Ochoa,silvia.ochoa@outlook.com,Huancayo,2024-03-05 13:35:00
+8,Miguel Rojas,miguel.rojas@hotmail.com,Lima,2024-03-06 14:42:00
+55,Patricia Vega,patricia.vega@gmail.com,Ica,03-07-2024
+20,Manuel Aguirre,manuel.aguirre@hotmail.com,Lima,03-08-2024

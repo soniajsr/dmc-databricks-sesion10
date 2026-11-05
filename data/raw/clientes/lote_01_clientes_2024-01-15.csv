@@ -1,0 +1,41 @@
+id_cliente,nombre,email,ciudad,fecha_registro
+1,Maria Gonzalez,maria.gonzalez@gmail.com,Lima,2021-01-01
+2,Carlos Ramirez,carlos.ramirez@hotmail.com,Arequipa,02/02/2022
+3,Ana Torres,ana.torres@yahoo.com,Trujillo,03-03-2023
+4,Luis Fernandez,luis.fernandez@outlook.com,Chiclayo,2021/04/04
+5,  patricia vega  ,patricia.vega@gmail.com,Piura,2022-05-05 13:35:00
+6,Jorge Quispe,jorge.quispe@hotmail.com,Cusco,06/06/2023 14:42:00
+7,ROSA MAMANI,rosa.mamani@yahoo.com,Huancayo,07/07/2021
+8,Miguel Rojas,miguel.rojas@outlook.com,Tacna,2022-08-08
+9,Carmen Flores,carmen.flores@gmail.com,,09/09/2023
+10,  pedro huaman  ,pedro.huaman@hotmail.com,Pucallpa,10-10-2021
+11,Lucia Salazar,luciasalazaryahoo.com,Chimbote,2022/11/11
+12,Diego Castro,diego.castro@outlook.com,Ica,2023-12-12 10:24:00
+13,Elena Rios,elena.rios@gmail.com,Lima,13/01/2021 11:31:00
+14,FERNANDO CHAVEZ,fernando.chavez@hotmail.com,Arequipa,02/14/2022
+15,  gabriela paredes  ,gabriela.paredes@yahoo.com,Trujillo,2023-03-15
+16,Ricardo Medina,ricardo.medina@outlook.com,Chiclayo,16/04/2021
+17,Sofia Vargas,sofia.vargas@gmail.com,Piura,05-17-2022
+18,Andres Cardenas,andres.cardenas@hotmail.com,Cusco,2023/06/18
+19,Valentina Espinoza,valentina.espinoza@yahoo.com,Huancayo,2021-07-19 17:13:00
+20,  manuel aguirre  ,manuel.aguirre@outlook.com,Tacna,20/08/2022 08:20:00
+21,DANIELA CABRERA,daniela.cabrera@gmail.com,Iquitos,09/21/2023
+22,Sebastian Nunez,SEBASTIAN.NUNEZ@HOTMAIL.COM,Pucallpa,2021-10-22
+23,Camila Reyes,camila.reyes@yahoo.com,Chimbote,23/11/2022
+24,Javier Morales,javier.morales@outlook.com,,12-24-2023
+25,  isabel guerrero  ,isabel.guerrero@gmail.com,Lima,2021/01/25
+26,Alvaro Delgado,alvaro.delgado@hotmail.com,Arequipa,2022-02-26 14:02:00
+27,Paola Ibanez,paola.ibanez@yahoo.com,Trujillo,27/03/2023 15:09:00
+28,RAUL CAMPOS,raul.campos@outlook.com,Chiclayo,04/01/2021
+29,Veronica Silva,veronica.silva@gmail.com,Piura,2022-05-02
+30,  hugo bravo  ,hugo.bravo@hotmail.com,Cusco,03/06/2023
+31,Natalia Ortiz,natalia.ortiz@yahoo.com,Huancayo,07-04-2021
+32,Gustavo Pinto,gustavo.pinto@outlook.com,Tacna,2022/08/05
+33,Claudia Herrera,CLAUDIA.HERRERA@GMAIL.COM,Iquitos,2023-09-06 14:42:00
+34,Ivan Suarez,ivan.suarez@hotmail.com,Pucallpa,07/10/2021 15:49:00
+35,MONICA VILLALOBOS,monica.villalobos@yahoo.com,Chimbote,11/08/2022
+36,Oscar Ponce,oscar.ponce@outlook.com,Ica,2023-12-09
+37,Teresa Cordero,teresa.cordero@gmail.com,Lima,10/01/2021
+38,Emilio Zambrano,emilio.zambrano@hotmail.com,Arequipa,02-11-2022
+39,Beatriz Solano,beatriz.solano@yahoo.com,Trujillo,2023/03/12
+,Roberto Aliaga,roberto.aliaga@gmail.com,Lima,2024-01-10
